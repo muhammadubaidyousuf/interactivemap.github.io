@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>USA Intractive Map</title>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Copy code from here style tag to style close -->
 	<style>
 	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
@@ -87,7 +87,7 @@
 	/*other hover close */
 
 	.st-text{
-		fill: #ffffff;
+		fill: #000;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 10px;
 		font-weight: bold;
@@ -96,13 +96,27 @@
 
 	.main{
 		display: flex;
-		justify-content: center;	
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		top: 30px;
 
 	}
 	#Layer_1{
-		height: 100vh;
-		width: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;	
+		height: 420px;
+
 	}
+
+
+	@media screen and (min-width: 500px) {
+		#Layer_1{
+			width: 100%;
+		}
+	}
+
 	.rct{
 		cursor: pointer;
 		stroke-width: 1;
@@ -175,14 +189,12 @@
 		<svg version="1.1" id="Layer_1" viewBox="0 0 600 400" overflow="visible" enable-background="new 0 0 600 400" xml:space="preserve"
 		>
 		<rect id="background" fill="none" width="600" height="400"/>
-
 		<rect class="opt1" x="180" y="-50" r="3" rx="3" ry="3"/>
 		<rect class="opt2" x="280" y="-50" r="3" rx="3" ry="3"/>
 		<rect class="opt3" x="380" y="-50" r="3" rx="3" ry="3"/>
-		<text class="st-text" x="190" y="-25" fill="blue">CURRENT</text>
-		<text class="st-text" x="285" y="-25" fill="blue">IN PROGRESS</text>
-		<text class="st-text" x="395" y="-25" fill="blue">COMMING SOON!</text>
-
+		<text class="st-text" x="195" y="-25" fill="blue">CURRENT</text>
+		<text class="st-text" x="284" y="-25" fill="blue">IN PROGRESS</text>
+		<text class="st-text" x="392" y="-25" fill="blue">COMMING SOON!</text>
 		<rect id="rt-nh" class="rct" x="600" y="90" r="3" rx="3" ry="3"/>
 		<rect id="rt-ma" class="rct" x="600" y="110" r="3" rx="3" ry="3"/>
 		<rect id="rt-ct" class="rct" x="600" y="130" r="3" rx="3" ry="3"/>
